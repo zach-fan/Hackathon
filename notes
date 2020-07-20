@@ -1,0 +1,41 @@
+RULES:
+
+10 Crossroads
+    3 Paths per Crossroad
+
+After 10 Crossroad 
+    Fight Boss
+    If win You win
+    If Lose, Lose heart go back
+
+After every path
+    Lose 1 Food
+
+Start out with 5 Food
+
+Start out with 3 Heart
+
+WAD = UP,LEFT, RIGHT,
+
+PUNCH/KICK/BLOCK  = PKB
+
+FIGHTING MECHANICS:
+
+Differnt Monsters BUTTTT Same MECHANICS
+Goblins, Snakes, Orcs, Witches, Skeleton
+Each Monster has Either Punch Kick or Block
+Must memeorize which has what to counter
+
+Minotaur 2/3 Rock Paper Scissor
+
+Items:
+Coins / Point System 20 %
+Food ( ANy kind dont matter) 30%
+Nthing 10%
+Monster 40%
+
+Higschore / Counter System:
+
+
+
+

@@ -3,6 +3,7 @@
   <head>
     <title> Maze </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel= "stylesheet" href= style.css>
   </head>
   <body>
     <h1> MAZE GAME</h1>
@@ -15,14 +16,18 @@
         <button type="button" class="btn btn-outline-dark" onclick="send_rules">Rules</button>
       </div>
       <div id= "settingsLink">
-        <button type="button" class="btn btn-outline-dark">Settings</button>
+        <button type="button" class="btn btn-outline-dark" onclick="send_settings">Settings</button>
       </div>
   </div>
   <script>
     function send_rules()
-{
-   location.href = "rules.html";
-} 
+  {
+    location.href = "rules.html";
+  } 
+
+  function send_settings(){
+    location.href = "settings.html"
+  }
   </script>
 
   </body>

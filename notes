@@ -22,7 +22,7 @@ PUNCH/KICK/BLOCK  = PKB
 FIGHTING MECHANICS:
 
 Differnt Monsters BUTTTT Same MECHANICS
-Goblins, Snakes, Orcs, witches, Skeleton
+Goblins, Snakes, Orcs, , Skeleton
 Each Monster has Either Punch Kick or Block
 Must memeorize which has what to counter
 
@@ -35,7 +35,10 @@ Nthing 10%
 Monster 40%
 
 Higschore / Counter System:
-
+Goblin = Punch
+Snake= Kick
+Orc = Block
+Skeleton= Kick
 
 
 

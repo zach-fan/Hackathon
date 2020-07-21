@@ -31,7 +31,7 @@
       <div class="jumbotron jumbotron-fluid">
         <h1 class="display-4">Maze of the Minotaur</h1><br/>
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-secondary">Start Game</button>
+          <button type="button" class="btn btn-secondary" onclick= "start_game()">Start Game</button>
           <button type="button" class="btn btn-secondary" onclick="send_rules()">Rules/How to play</button>
           <button type="button" class="btn btn-secondary" onclick="send_settings()">Settings</button>
           <button type="button" class="btn btn-secondary">bestiary</button>
@@ -41,6 +41,9 @@
 
 
     <script>
+      function start_game(){
+        location.href = "game.html"
+      }
       function send_rules() {
         location.href = "rules.html";
       }

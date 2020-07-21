@@ -1,34 +1,56 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <title> MazeoftheMinotaur </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel= "stylesheet" href= style.css>
-  </head>
-  <body>
-    <h1> Maze of the Minotaur</h1>
-    <!----We need a new game title-->
-    <div class = container>
-      <div id= "startGame">
-        <button type="button" class="btn btn-outline-dark">Start Game</button>
-      </div>
-      <div id= "rulesLink">
-        <button type="button" class="btn btn-outline-dark" onclick="send_rules()">Rules</button>
-      </div>
-      <div id= "settingsLink">
-        <button type="button" class="btn btn-outline-dark" onclick="send_settings()">Settings</button>
-      </div>
-  </div>
-  <script>
-    function send_rules()
-  {
-    location.href = "rules.html";
-  } 
+<html lang="en">
 
-  function send_settings(){
-    location.href = "settings.html"
-  }
-  </script>
+<head>
+  <title> Maze of the Minotaur </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href=style.css>
+</head>
 
+<body>
+  <center>
+    <style>
+      body {
+        background-image: url(maze2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .jumbotron {
+        background-color: darkgray;
+      }
+
+      .btn {
+        position: absolute;
+        margin: auto;
+      }
+    </style>
+    <div class="container-fluid">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">Maze of the Minotaur</h1><br/>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-secondary">Start Game</button>
+          <button type="button" class="btn btn-secondary" onclick="send_rules()">Rules/How to play</button>
+          <button type="button" class="btn btn-secondary" onclick="send_settings()">Settings</button>
+          <button type="button" class="btn btn-secondary">bestiary</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      function send_rules() {
+        location.href = "rules.html";
+      }
+
+      function send_settings() {
+        location.href = "settings.html"
+      }
+    </script>
+
+  </center>
 </body>
+
 </html>

@@ -18,6 +18,5 @@ for (var m= 0; m < 10; m++){
 
         }
     }
-    var pathEnd = Math.random()
 
 }

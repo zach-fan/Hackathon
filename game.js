@@ -66,13 +66,8 @@ while (m < 10, food > 0, health > 0) {
                     console.log("Oh no a Skeleton, use either punch, kick, or block to beat it! Make sure you use the correct one!")
                     document.onkeyup = function (event) {
                         if (event.key = "p") {
-<<<<<<< HEAD
                             console.log("Congrats you beat the Goblin")
                             m++
-=======
-                            console.log("Congrats you beat the Skeleton")
-
->>>>>>> 7344d110e4e2565439a1f7114782adc5190dee4f
 
                         }
                         else {

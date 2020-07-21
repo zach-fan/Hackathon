@@ -1,24 +1,10 @@
-var dungeon = ["Coin", "Coin", "Soup", "Meat", "Potato", "Goblin", "Skeleton", "Witch", "Snake", "Nothing"]
 var coins = 0
 var health = 3
 var food = 5
 
-
-
-
-document.onkeyup = function(event) {
-if (event.key === "w" || event.key === "a" || event.key === "d")
-{
-    var encounter = dungeon [Math.floor(Math.random() * dungeon.length)];
-
-    console.log(encounter)
-
-}
-
 for (var m= 0; m < 10; m++){
     document.write()
     console.log("crossroad" + m)
-  
 
     document.onkeyup = function (event){
         var keypressed = event.key;
@@ -31,13 +17,7 @@ for (var m= 0; m < 10; m++){
         }else{
 
         }
-      
-      document.onkeyup = function(event) {
-if (event.key === "w" || event.key === "a" || event.key === "d")
-{
-    var encounter = dungeon [Math.floor(Math.random() * dungeon.length)];
-
-    console.log(encounter)
     }
-  
+    var pathEnd = Math.random()
+
 }

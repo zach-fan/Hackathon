@@ -2,12 +2,12 @@ var dungeon = ["Coin", "Coin", "Soup", "Meat", "Potato", "Goblin", "Skeleton", "
 var coins = 0
 var health = 3
 var food = 5
+var m = 0
 
 
 
-
-for (var m = 0; m < 10; m++) {
-    document.write()
+while (m < 10, food > 0, health > 0) {
+    document.write("You have encountered a crossroad")
     console.log("crossroad" + m)
 
     document.onkeyup = function (event) {
@@ -31,12 +31,14 @@ for (var m = 0; m < 10; m++) {
 
                 if (encounter = "Coin") {
                     coins++
+                    m++
                     console.log("Coins: " + coins)
                 };
 
                 if (encounter === "Soup" || encounter === "Meat" || encounter === "Potato") {
 
                     food++
+                    m++
                 };
 
                 if (encounter === "Goblin") {
@@ -64,7 +66,7 @@ for (var m = 0; m < 10; m++) {
                     document.onkeyup = function (event) {
                         if (event.key = "p") {
                             console.log("Congrats you beat the Goblin")
-
+                            m++
 
                         }
                         else {
@@ -84,7 +86,7 @@ for (var m = 0; m < 10; m++) {
                     document.onkeyup = function (event) {
                         if (event.key = "k") {
                             console.log("Congrats you beat the Goblin")
-
+                            m++
 
                         }
                         else {
@@ -105,7 +107,7 @@ for (var m = 0; m < 10; m++) {
                         if (event.key = "p") {
                             console.log("Congrats you beat the Goblin")
                             document.write("Health: " + health)
-
+                            m++
 
 
                         }

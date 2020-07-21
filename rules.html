@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rules-motm</title>
 </head>
 <body>
     <h1>Rules</h1>
+    <button type="button" class="btn btn-dark" onclick = "send_home()">Home</button>
+    
     <P>
         You are lost in a magical maze full of creatures
         Battle monsters and collect coins and food to make your way out of the maze
@@ -36,14 +38,24 @@
     <h2> <u>Controls</u></h2>
     <p>
         Movement:
-        W -> Forward
-        A -> Left
-        D -> Right
-
+        <ul>
+        <li>W - Forward</li>
+        <li>A -> Left</li>
+        <li>D -> Right</li>
+        </ul>
+        <br>
         Fighting:
-        K -> Kick
-        P -> Punch
-        B -> Block
+        <ul>
+        <li>K -> Kick</li>
+        <li>P -> Punch</li>
+        <li>B -> Block</li>
+        </ul>
     </p>
+    <script>
+        function send_home()
+  {
+    location.href = "index.html";
+  }
+    </script>
 </body>
 </html>

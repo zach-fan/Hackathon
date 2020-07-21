@@ -2,12 +2,12 @@ var dungeon = ["Coin", "Coin", "Soup", "Meat", "Potato", "Goblin", "Skeleton", "
 var coins = 0
 var health = 3
 var food = 5
+var m = 0
 
 
 
-
-for (var m = 0; m < 10; m++) {
-    document.write()
+while (m < 10, food > 0, health > 0) {
+    document.write("You have encountered a crossroad")
     console.log("crossroad" + m)
 
     document.onkeyup = function (event) {
@@ -31,12 +31,14 @@ for (var m = 0; m < 10; m++) {
 
                 if (encounter = "Coin") {
                     coins++
+                    m++
                     console.log("Coins: " + coins)
                 };
 
                 if (encounter === "Soup" || encounter === "Meat" || encounter === "Potato") {
 
                     food++
+                    m++
                 };
 
                 if (encounter === "Goblin") {
@@ -64,8 +66,13 @@ for (var m = 0; m < 10; m++) {
                     console.log("Oh no a Skeleton, use either punch, kick, or block to beat it! Make sure you use the correct one!")
                     document.onkeyup = function (event) {
                         if (event.key = "p") {
+<<<<<<< HEAD
+                            console.log("Congrats you beat the Goblin")
+                            m++
+=======
                             console.log("Congrats you beat the Skeleton")
 
+>>>>>>> 7344d110e4e2565439a1f7114782adc5190dee4f
 
                         }
                         else {
@@ -85,7 +92,7 @@ for (var m = 0; m < 10; m++) {
                     document.onkeyup = function (event) {
                         if (event.key = "k") {
                             console.log("You best the orc and after searching their pockets like a true adventurer, you move on to the next room")
-
+                            m++
 
                         }
                         else {
@@ -108,7 +115,7 @@ for (var m = 0; m < 10; m++) {
                             console.log("After wrestling the snake and beating it to a pulp, you continue on your journey."
                         )
                             document.write("Health: " + health)
-
+                            m++
 
 
                         }

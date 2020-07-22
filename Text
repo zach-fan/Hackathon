@@ -5,7 +5,7 @@ minotaur at the end of the maze, but that is just a rumor. Be careful, and be pr
 
 
 *end text*
-Congrats on getting out of the labyrinth alive! You have beat the Maze of the Minotaur
+Congrats on getting out of the labyrinth alive! You have beat the Maze of the Minotaur.
 
 *Crossroad*
 The room has 4 exits, one to the left, one to the right, one straight ahead, and the one you just came out of. Choose which direction you want to go (except if it is back, yo cannot go back because that would be counter intuitive and waste your time).
@@ -76,5 +76,9 @@ The skeleton knocks you into a wall and then cracks your skull, but before it ca
 
 *boss fight*
 minotaur start
+As you approach the final room, your nose is assailed by the stench exuding from the bodies of the past adventurers. You steeel yourself for the battle to come. You enter into what looks like an arena, and opposite you is a hulking slab of meat that 
+could only be the minotaur. You know that it is your duty and your honor to face this monstrosity, to avenge your fallen comrades and to complete this game. Realizing that this is it, you brace yourself as the Minotaur charges.
 minotaur Win
+You duck and weave, managing to survive and with a final blow to the jaw, you defeat the Minotaur. You pat yourself on the back and exit the Maze of the Minotaur.
 minotaur loss
+You get hit by the minotaur and while winded he slams into you. You run blindly into the dungeon, hoping to escape it. After a minute or two, you calm down and start back towards the Minotaur. You have lost one life.

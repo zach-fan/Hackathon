@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Settings</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Settings</h1>
+
+        <script type = text/javascript>
+ var KPB = ["k", "p", "b"];
+ var textkpb = ["Kick", "Punch", "Block"];
+var userChoice = "k";
+var compWin = 0;
+var userWin = 0;
+
+addEventListener(document.onkeyup = function (event) {
+        var userChoice = event.key;
+
+    if (KPB.includes(userChoice)) {
+        var compRandom = Math.floor(Math.random() * KPB.length)
+        console.log(KPB[compRandom])
+        computerChoice = KPB[compRandom]
+
+        if(userChoice === computerChoice){
+            console.log("tie" + userChoice)
+            document.write("tie")
+        } else if(userChoice === "k" && computerChoice === "p" || userChoice === "p" && computerChoice === "b" || userChoice === "b" && computerChoice === "k"){
+            document.write ("Thats one win for the Minotaur")
+            compWin++
+            console.log()
+        }else{
+            document.write ("You won this round!")
+            userWin++
+            console.log (userWin)
+        }
+    if(compWin === 2 || userWin === 2){
+        document.write(" Userwin text")
+        
+        function send_home() {
+        location.href = "index.html";
+      }
+    }
+
+}

@@ -135,3 +135,34 @@ $(document).ready(function(){
 
 
 //boss fight
+var KPB = ["k", "p", "b"];
+var userChoice = h;
+var compWin = 0
+
+for(var userWin = 0; userWin < 2 && compWin < 2;){
+    
+    addEventListener(document.onkeyup = function (event) {
+        var userChoice = event.key;
+    
+    if (KPB.includes(userChoice)) {
+        var compRandom = Math.floor(Math.random() * KPB.length)
+        console.log(KPB[compRandom])
+        computerChoice = KPB[compRandom]
+
+        if(userChoice === computerChoice){
+            document.write(" Both you and the Minoaur chose to " + userChoice)
+        } else if(userChoice === "k" && computerChoice === "p" || userChoice === "p" && computerChoice === "b" || userChoice === "b" && computerChoice === "k"){
+            document.write ("You chose to " + userChoice + " and the Minotaur chose to " + computerChoice + ". Thats one win for the Minotaur")
+            compWin++
+        }else{
+            document.write ("You chose to " + userChoice + " and the Minotaur chose to " + computerChoice + ". You won this round!")
+            userWin++
+        }
+    }
+    })
+}
+    if(compWin < userWin){
+        document.write(" Userwin text")
+    } else{
+    document.write("Userloss text")
+}

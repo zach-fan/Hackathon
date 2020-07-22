@@ -5,7 +5,7 @@ minotaur at the end of the maze, but that is just a rumor. Be careful, and be pr
 
 
 *end text*
-
+Congrats on getting out of the labyrinth alive! You have beat the Maze of the Minotaur
 
 *Crossroad*
 The room has 4 exits, one to the left, one to the right, one straight ahead, and the one you just came out of. Choose which direction you want to go (except if it is back, yo cannot go back because that would be counter intuitive and waste your time).
@@ -74,6 +74,7 @@ Skeleton loss
 The skeleton knocks you into a wall and then cracks your skull, but before it can finish you off, the bones turn to dust because they were so brittle.
 
 
+*boss fight*
 minotaur start
 minotaur Win
 minotaur loss

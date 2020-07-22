@@ -29,19 +29,19 @@
     </style>
     <div class="container-fluid">
       <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-4">Maze of the Minotaur</h1><br/>
+        <h1 class="display-4">Maze of the Minotaur</h1><br />
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-secondary" onclick= "start_game()">Start Game</button>
+          <button type="button" class="btn btn-secondary" onclick="start_game()">Start Game</button>
           <button type="button" class="btn btn-secondary" onclick="send_rules()">Rules/How to play</button>
-          <button type="button" class="btn btn-secondary" onclick="send_settings()">Settings</button>
-          <button type="button" class="btn btn-secondary">bestiary</button>
+          <button type="button" class="btn btn-secondary disabled" aria-disabled="true">Settings</button>
+          <button type="button" class="btn btn-secondary" onclick="send_bestiary()">bestiary</button>
         </div>
       </div>
     </div>
 
 
     <script>
-      function start_game(){
+      function start_game() {
         location.href = "game.html"
       }
       function send_rules() {
@@ -50,6 +50,9 @@
 
       function send_settings() {
         location.href = "settings.html"
+      }
+      function send_bestiary() {
+        location.href = "bestiary.html"
       }
     </script>
 

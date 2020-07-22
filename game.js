@@ -3,10 +3,14 @@ var coins = 0
 var health = 3
 var food = 5
 var m = 0
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 
+$(document).ready(function(){
+    $('body').on("keyup",'.incomplete_required', function(){
+        console.log('keyed');
+    });
+});
 
-
-while (m < 10, food > 0, health > 0) {
     document.write("You have encountered a crossroad")
     console.log("crossroad" + m)
 
@@ -122,18 +126,12 @@ while (m < 10, food > 0, health > 0) {
                             document.write("Health: " + health)
                             m--
 
-
-
                         }
                     }
                 }
-
-
-
-
-
             }
         }
     }
 
-}
+
+//boss fight

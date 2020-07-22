@@ -7,7 +7,6 @@ var m = 0
 
 
 
-
 function startGame() {
     addEventListener("keydown", function (e) {
         var keyCode = e.keyCode
@@ -50,9 +49,11 @@ document.onkeyup = function (event) {
             m++
             console.log("Coins: " + coins)
 
+
         };
 
         if (encounter === "Soup" || encounter === "Meat" || encounter === "Potato") {
+
 
             food++
             m++
@@ -122,7 +123,6 @@ document.onkeyup = function (event) {
                     m--
 
 
-
                 }
             }
         }
@@ -156,6 +156,7 @@ document.onkeyup = function (event) {
 
 
                 }
+
             }
         }
 
@@ -165,5 +166,6 @@ document.onkeyup = function (event) {
 
     }
 }
+
 
 

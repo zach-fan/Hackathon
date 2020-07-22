@@ -166,7 +166,7 @@ document.onkeyup = function (event){
                 document.write("userlosstext");
                 <a href="end.html">Home Page</a>
             }
-            
+            Just push your changes to github so that everything is updated
     
           }
         }

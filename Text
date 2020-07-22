@@ -1,7 +1,10 @@
 *start text*
+The king of the lands of Alvernia has decreed that all adventures are to be sent into the sprawling labyrinth located below the capital. You are tasked with going through a section of this maze, fighting monsters and finding treasure. There are many perils that 
+you will face. There are goblins, dumb but their punches are extremely powerful, snakes, whose venom really has a kick to it, skeletons, who's limber frames allow them to take punches easily and orcs, who fists are like boulders. There is also said to be a
+minotaur at the end of the maze, but that is just a rumor. Be careful, and be prepared.
 *end text*
 *Crossroad*
-The room has 4 exits, left ()
+The room has 4 exits, one to the left, one to the right, one straight ahead, and the one you just came out of. Choose which direction you want to go (except if it is back, yo cannot go back because that would be counter intuitive and waste your time).
 *monsters*
 Goblin #1
 As you pass through the dungeon, you smell an awful stench. You slink closer only to find a solitary goblin finishing up a drum stick. when he sees you throws it aside and prepares to make your bones into plaster.
@@ -46,4 +49,4 @@ Orc Win
 You best the orc and after searching their pockets like a true adventurer, you move on to the next room
 
 Orc loss
-After being battered by the Orc, it slips and falls. allowing you to whail on it. You lost one life.
+After being battered by the Orc, it slips and falls allowing you to whail on it with a vengance. You lost one life.

@@ -171,37 +171,52 @@ document.onkeyup = function (event) {
 
 //boss fight
 var kpb = ["k", "p", "b"];
-var compWin = 0
+var compWin = 0;
+var userWin = 0;
     
-document.onkeyup = function (event){
+document.onkeyup = function(event){
     var userChoice = event.key;
-    
+            var computerChoice = kpb[Math.floor(Math.random() * kpb.length)];
+            console.log(computerChoice);
         if (kpb.includes(userChoice)) {
-            var compRandom = Math.floor(Math.random() * kpb.length)
-            console.log(kpb[compRandom])
-            computerChoice = kpb[compRandom]
-    
             if(userChoice === computerChoice){
-                console.log("tie" + userChoice)
-                document.write("tie")
+                console.log("tie" + userChoice);
+                document.write("tie");
             } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
                 document.write ("Thats one win for the Minotaur")
                 compWin++
-                console.log(compWin)
+                console.log(compWin);
             }else{
                 document.write ("You won this round!")
                 userWin++
-                console.log (userWin)
+                console.log (userWin);
             }
         if(compWin === 2 || userWin === 2){
             if(compWin < userWin){
-                document.write(" Userwin text");
-                <a href="end.html">Click Here to Leave Maze!</a>
+                var escape = true;
+                var fail = false;
+               alert(" Congratulations You Beat the Minotaur! Click on the button to exit the Maze");
+                if (escape === true){
+                    document.getElementById("end_button").style.display="block";
+                    document.getElementById("try_again").style.display="none";
+                } 
+                
             }else{
-                document.write("userlosstext");
-                <a href="end.html">Home Page</a>
+                alert("Unfortunately you did not beat the Minotaur and died. Click the button to try again");
+                fail = true;
+                escape = false;
+                if(fail === true){
+                    document.getElementById("try_again").style.display="block";
+                    document.getElementById("end_button").style.display="none";
+                } 
+                
             }
-    
+            function end() {
+                location.href = "end.html"
+              }
+              function restart() {
+                location.href = "game.html";
+              }
           }
         }
     

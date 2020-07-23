@@ -3,39 +3,60 @@
     <head>
         <title> Settings</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
         <h1>Settings</h1>
-
+        <h2>press K,P, or B</h2>
         <script type = text/javascript>
  var kpb = ["k", "p", "b"];
 var compWin = 0;
 var userWin = 0;
-document.onkeyup = function (event){
-        var userChoice = event.key;
-
-    if (kpb.includes(userChoice)) {
-        var compRandom = Math.floor(Math.random() * kpb.length)
-        console.log(kpb[compRandom])
-        computerChoice = kpb[compRandom]
-
-        if(userChoice === computerChoice){
-            console.log("tie" + userChoice)
-            document.write("tie")
-        } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
-            document.write ("Thats one win for the Minotaur")
-            compWin++
-            console.log(compWin)
-        }else{
-            document.write ("You won this round!")
-            userWin++
-            console.log (userWin)
+    
+document.onkeyup = function(event){
+    var userChoice = event.key;
+            var computerChoice = kpb[Math.floor(Math.random() * kpb.length)];
+            console.log(computerChoice);
+        if (kpb.includes(userChoice)) {
+            if(userChoice === computerChoice){
+                console.log("tie" + userChoice);
+                document.write("tie");
+            } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
+                document.write ("Thats one win for the Minotaur")
+                compWin++
+                console.log(compWin);
+            }else{
+                document.write ("You won this round!")
+                userWin++
+                console.log (userWin);
+            }
+        if(compWin === 2 || userWin === 2){
+            if(compWin < userWin){
+                var escape = true;
+                var fail = false;
+               alert(" Congratulations You Beat the Minotaur! Click on the button to exit the Maze");
+                if (escape === true){
+                    document.getElementById("end_button").style.display="block";
+                    document.getElementById("try_again").style.display="none";
+                } 
+                
+            }else{
+                alert("Unfortunately you did not beat the Minotaur and died. Click the button to try again");
+                fail = true;
+                escape = false;
+                if(fail === true){
+                    document.getElementById("try_again").style.display="block";
+                    document.getElementById("end_button").style.display="none";
+                } 
+                
+            }
+            function end() {
+                location.href = "end.html"
+              }
+              function restart() {
+                location.href = "game.html";
+              }
+          }
         }
-    if(compWin === 1 || userWin === 1){
-        document.write(" Userwin text")
-        document.location.href = "end.html";
-
-      }
+    
     }
-
-}

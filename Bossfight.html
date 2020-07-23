@@ -57,7 +57,7 @@
             }
           </style>
             <div id = end_button>
-                <button type="button" class="btn btn-outline-secondary" onclick = "send-home()">Home</button>
+                <button type="button" class="btn btn-outline-secondary" onclick = "sendhome()">Home</button>
             </div>
             </div>
         </div>
@@ -74,19 +74,22 @@ document.onkeyup = function(event){
         if (kpb.includes(userChoice)) {
             if(userChoice === computerChoice){
                 ties++
-                console.log("tie" + userChoice);
+                console.log("tie: " + userChoice);
                 var tieText = document.getElementById("tieScore");
-                tieText.textContent = "tie"
+                tieText.textContent = "Ties"
+                var newtie = document.createElement("div");
+                newtie.textContent = ties; 
+                tieText.appendChild(newtie);
             } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
                 compWin++
                 var loseText = document.getElementById("bossScore");
                 loseText.textContent = compWin
-                console.log("lose" + userChoice);
+                console.log("lose: " + userChoice);
             }else{
                 userWin++
                 var winText = document.getElementById("userscore");
                 winText.textContent = userWin
-                console.log ("win" + userChoice);
+                console.log ("win: " + userChoice);
             }
             if( compWin=== 2 || userWin === 2){
                 if(compWin < userWin){
@@ -95,7 +98,7 @@ document.onkeyup = function(event){
                     alert("Unfortunately you did not beat the Minotaur and died.");
                 }
             }
-            function send-home(){
+            function sendhome(){
                 location.href = "index.html"
             }
           }

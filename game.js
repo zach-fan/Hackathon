@@ -171,27 +171,25 @@ document.onkeyup = function (event) {
 
 //boss fight
 var kpb = ["k", "p", "b"];
-var compWin = 0
+var compWin = 0;
+var userWin = 0;
     
-document.onkeyup = function (event){
+document.onkeyup = function(event){
     var userChoice = event.key;
-    
+            var computerChoice = kpb[Math.floor(Math.random() * kpb.length)];
+            console.log(computerChoice);
         if (kpb.includes(userChoice)) {
-            var compRandom = Math.floor(Math.random() * kpb.length)
-            console.log(kpb[compRandom])
-            computerChoice = kpb[compRandom]
-    
             if(userChoice === computerChoice){
-                console.log("tie" + userChoice)
-                document.write("tie")
+                console.log("tie" + userChoice);
+                document.write("tie");
             } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
                 document.write ("Thats one win for the Minotaur")
                 compWin++
-                console.log(compWin)
+                console.log(compWin);
             }else{
                 document.write ("You won this round!")
                 userWin++
-                console.log (userWin)
+                console.log (userWin);
             }
         if(compWin === 2 || userWin === 2){
             if(compWin < userWin){

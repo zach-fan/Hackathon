@@ -182,17 +182,16 @@ document.onkeyup = function(event){
         if (kpb.includes(userChoice)) {
             if(userChoice === computerChoice){
                 console.log("tie" + userChoice);
-                document.write("tie");
+                document.write("You and the Minotaur chose the same move. Its a tie!");
             } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
                 document.write ("Thats one win for the Minotaur")
                 compWin++
-                console.log(compWin);
+                console.log("lose" + userChoice);
             }else{
                 document.write ("You won this round!")
                 userWin++
-                console.log (userWin);
+                console.log ("win" + userChoice);
             }
-        if(compWin === 2 || userWin === 2){
             if(compWin < userWin){
                 var escape = true;
                 var fail = false;
@@ -220,5 +219,3 @@ document.onkeyup = function(event){
               }
           }
         }
-    
-    }

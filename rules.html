@@ -1,61 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rules-motm</title>
+    <title>Maze of the Minotaur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>Rules</h1>
-    <button type="button" class="btn btn-dark" onclick = "send_home()">Home</button>
-    
-    <P>
-        You are lost in a magical maze full of creatures
-        Battle monsters and collect coins and food to make your way out of the maze
-    </P>
-    <p>
-        Every time you reach a crossroad you will be given a choice to go one of three ways
-        <ul>
-            <li>Forward</li>
-            <li>Right</li>
-            <li>Left</li>
-        </ul>
-        Once you go down a road you will lose one food but you can also regain food along the way depending on what path is taken
-        Watch out if you lose all of your food the game ends
-    </p>
-    <h2>Monster Battles</h2>
-    <p>
-        When battling monsters you can choose to kick, punch, or block and the monster will also choose one of the three.
-        Keep in mind the following outcomes for each choice:
-        <ul>
-            <li>Kick beats Block</li>
-            <li>Block beats Punch</li>
-            <li>Punch beats Kick</li>
-        </ul>
-        If you win you will advance to the next crossroad
-        If you lose you will lose a heart and be sent back to the last crossroad
-    </p>
-    <h2> <u>Controls</u></h2>
-    <p>
-        Movement:
-        <ul>
-        <li>W - Forward</li>
-        <li>A -> Left</li>
-        <li>D -> Right</li>
-        </ul>
-        <br>
-        Fighting:
-        <ul>
-        <li>K -> Kick</li>
-        <li>P -> Punch</li>
-        <li>B -> Block</li>
-        </ul>
-    </p>
+    <div class="jumbotron jumbotron-fluid">
+        <center>
+            <div class="container">
+                <h1 class="display-4">Rules</h1>
+
+            </div>
+        </center>
+    </div>
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        The aim of the game
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    The goal of the game is to survive the Maze of the Minotaur. You will spend ten rounds trying to
+                    fend off mobs, while gathering coins and food. After those ten rounds you will face off against the
+                    minotaur. If you defeat him, the game will end. But failure will result in losing a life and having
+                    to go through more of the dungeon befoire facing off again. Througout the dungeon you will collect
+                    coins, and your highest coin collection in one run will be displayed.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Crossroads
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    When you finish one room, you are able to go in one of three directions, left, right, and forward.
+                    To go left, press A. To go straight, press W. To go left press D. Choose wisely, because choosing
+                    the wrong one result in death.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Food & Health
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    You start the game with three health and five food. If either of these values goes to zero, you
+                    lose. You will lose one food every round and in many rooms there will be food thast you can use to
+                    keep your character alive. You lose one health every time you lose to a monster and it cannot be
+                    regained.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        combat
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    when facing a monster, you will engage in combat. There are three moves that your character can do.
+                    These are punch (press P), kick (press K), and block (press b). Each monster has a set move that it
+                    can use. Check the bestiary for clues on this topic. Kick beat block, Block beats punch, and punch beats block.
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="send_home()">Back</button>
+    <style>
+        body {
+            background-image: url(maze2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .jumbotron {
+            margin: 0px;
+            background-color: #595858;
+            color: white;
+        }
+
+        .card {
+            background-color: darkgray;
+        }
+
+        .btn-secondary {
+            background-color: #595858;
+        }
+    </style>
     <script>
-        function send_home()
-  {
-    location.href = "index.html";
-  }
+        function send_home() {
+            location.href = "index.html"
+        }
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

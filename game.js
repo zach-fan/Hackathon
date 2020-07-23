@@ -193,13 +193,30 @@ document.onkeyup = function(event){
             }
         if(compWin === 2 || userWin === 2){
             if(compWin < userWin){
-                document.write(" Userwin text");
-                <a href="end.html">Click Here to Leave Maze!</a>
+                var escape = true;
+                var fail = false;
+               alert(" Congratulations You Beat the Minotaur! Click on the button to exit the Maze");
+                if (escape === true){
+                    document.getElementById("end_button").style.display="block";
+                    document.getElementById("try_again").style.display="none";
+                } 
+                
             }else{
-                document.write("userlosstext");
-                <a href="end.html">Home Page</a>
+                alert("Unfortunately you did not beat the Minotaur and died. Click the button to try again");
+                fail = true;
+                escape = false;
+                if(fail === true){
+                    document.getElementById("try_again").style.display="block";
+                    document.getElementById("end_button").style.display="none";
+                } 
+                
             }
-    
+            function end() {
+                location.href = "end.html"
+              }
+              function restart() {
+                location.href = "game.html";
+              }
           }
         }
     

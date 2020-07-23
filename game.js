@@ -173,6 +173,7 @@ document.onkeyup = function (event) {
 var kpb = ["k", "p", "b"];
 var compWin = 0;
 var userWin = 0;
+document.write("As you approach the final room, your nose is assailed by the stench exuding from the bodies of the past adventurers. You steeel yourself for the battle to come. You enter into what looks like an arena, and opposite you is a hulking slab of meat that ould only be the minotaur. You know that it is your duty and your honor to face this monstrosity, to avenge your fallen comrades and to complete this game. Realizing that this is it, you brace yourself as the Minotaur charges.")
     
 document.onkeyup = function(event){
     var userChoice = event.key;

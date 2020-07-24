@@ -101,6 +101,7 @@ document.onkeyup = function(event){
             if( compWin=== 2 || userWin === 2){
                 if(compWin < userWin){
                     alert(" Congratulations You Beat the Minotaur and Escaped from the Maze! Click the button to return Home");
+                    window.location.replace("end.html")
                 }else{
                     alert("Unfortunately you did not beat the Minotaur and died. Click the button to return Home");
                 }

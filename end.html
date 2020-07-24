@@ -7,19 +7,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <h1>end</h1>
+    <h1></h1>
     <div class = container>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">YOU WON!</h1>
+              <p class="lead">You successfully escaped the Maze! Click the button to return Home</p>
+            </div>
+          </div>
         <div id = end_button> 
-            <button type="button" class="btn btn-outline-danger"onclick = "end()">Escape the Maze</button>
+            <button type="button" class="btn btn-outline-danger">Home</button>
         </div>
-        <div id = try_again>
-            <button type="button" class="btn btn-outline-danger" onclick = "restart()">Try Again</button>
-        </div>
+        <style>
+            body{
+                background-image: url(https://images.squarespace-cdn.com/content/v1/5807e664b8a79b2b731cd55a/1478186164758-L5TGY1JHGEI9FDDTV7L5/ke17ZwdGBToddI8pDm48kKAwwdAfKsTlKsCcElEApLR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UegTYNQkRo-Jk4EWsyBNhwKrKLo5CceA1-Tdpfgyxoog5ck0MD3_q0rY3jFJjjoLbQ/Unraveled-Escape-Room-Maze.jpg);
+                font-family: fantasy;
+            }
+        </style>
     
     </div>
 
     <script>
-        
-        </script>
+        document.getElementById("end_button").onclick = function () {
+                location.href = "index.html";
+        }
+    </script>
 </body>
 </html>

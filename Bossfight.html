@@ -11,24 +11,30 @@
                 <h1 class="display-4"><b>Battle Against the Minotaur</b></h1>
                 <h2>Press K, P, or B to Start</h2>
         </div>
+        <div class = container>
         <div class = body-text>
             <div id= text>
                 <p>As you approach the final room, your nose is assailed by the stench exuding from the bodies of the past adventurers. You steeel yourself for the battle to come. You enter into what looks like an arena, and opposite you is a hulking slab of meat that ould only be the minotaur. You know that it is your duty and your honor to face this monstrosity, to avenge your fallen comrades and to complete this game. Realizing that this is it, you brace yourself as the Minotaur charges.</p>
             </div>
-            <h3><u>Score Board</u></h3>
-            <h4>Minotaur:</h4>
-            <div id= bossScore>
-                <p></p>
-            </div>
-            <h4>You:</h4>
-            <div id= userscore>
-                <p></p>
-            </div>
-            <h4>Ties:</h4>
-            <div id= tieScore>
-                <p></p>
-            </div>
-            <div class = container>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  Scoreboard
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Minotaur:
+                    <div id= bossScore>
+                    </div>
+                    </li>
+                  <li class="list-group-item">You:
+                    <div id= userscore>
+                    </div>
+                  </li>
+                  <li class="list-group-item">Ties:
+                    <div id= tieScore>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             <style>
             body{
               background-image: url(https://i2.wp.com/dmdave.com/wp-content/uploads/2019/03/minotaur-1484121852-1552244563350.jpg?resize=595%2C300&ssl=1);
@@ -48,18 +54,20 @@
             }
             .header{
                 color: white;
-                margin-left: 10 px;
-                margin-right: 10;
                 text-align: center;
             }
             #text{
                 text-align: center;
             }
+            .card{
+                color: black;
+                margin-left: 325px;
+            }
           </style>
-            <div id = end_button>
-                <button type="button" class="btn btn-outline-secondary" onclick = "sendhome()">Home</button>
-            </div>
-            </div>
+                <div id = end_button>
+                    <button type="button" class="btn btn-outline-secondary" id = "home_button">Home</button>
+                </div>
+          </div>
         </div>
         <script type = text/javascript>
  var kpb = ["k", "p", "b"];
@@ -76,10 +84,7 @@ document.onkeyup = function(event){
                 ties++
                 console.log("tie: " + userChoice);
                 var tieText = document.getElementById("tieScore");
-                tieText.textContent = "Ties"
-                var newtie = document.createElement("div");
-                newtie.textContent = ties; 
-                tieText.appendChild(newtie);
+                tieText.textContent = ties
             } else if(userChoice === "p" && computerChoice === "k" || userChoice === "b" && computerChoice === "p" || userChoice === "k" && computerChoice === "b"){
                 compWin++
                 var loseText = document.getElementById("bossScore");
@@ -93,16 +98,16 @@ document.onkeyup = function(event){
             }
             if( compWin=== 2 || userWin === 2){
                 if(compWin < userWin){
-                    alert(" Congratulations You Beat the Minotaur and Escaped from the Maze!");
+                    alert(" Congratulations You Beat the Minotaur and Escaped from the Maze! Click the button to return Home");
                 }else{
-                    alert("Unfortunately you did not beat the Minotaur and died.");
+                    alert("Unfortunately you did not beat the Minotaur and died. Click the button to return Home");
                 }
             }
-            function sendhome(){
-                location.href = "index.html"
+            document.getElementById("home_button").onclick = function () {
+                location.href = "index.html";
+            };
             }
           }
-        }
 </script>
 </body>
 </html>

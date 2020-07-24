@@ -53,7 +53,7 @@ function startGame() {
     }
     if (m >= 10){
         alert("You're Going to Boss Room")
-        window.location.replace("bossfight.html")
+        window.location.replace("Bossfight.html")
 
 
 //Boss ROOM GO
@@ -70,6 +70,8 @@ function startGame() {
             console.log("Food: " + food);
             var healthDiv = document.getElementById("health-text");
     healthDiv.textContent = "Health: " + health;
+    var foodDiv = document.getElementById("food-text");
+    healthDiv.textContent = "Food: " + food;
 
             if (encounter === "Coin") {
                 coins++
@@ -93,7 +95,7 @@ function startGame() {
 
 
             if (encounter === "Goblin") {
-                console.log(" oH no Goblin")
+                console.log(" As you pass through the dungeon, you smell an awful stench. You slink closer only to find a solitary goblin finishing up a drum stick. when he sees you throws it aside and prepares to make your bones into plaster.")
                 document.onkeyup = function (event) {
                     var keyCode = (event).keyCode
 
